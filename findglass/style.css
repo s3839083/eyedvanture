@@ -1,0 +1,475 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FFFFE8;
+  margin: 0;
+  overflow: hidden;
+}
+
+#introduction {
+  width: 70vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  aspect-ratio: 5330/3344;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.intro {
+  position: absolute;
+  top: 30%;
+}
+
+.start {
+  position: absolute;
+  left: 37%;
+  top: 65%;
+  cursor:pointer;
+}
+
+#findglasses_game {
+  width: 70vw;
+  aspect-ratio: 5330/3344;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  overflow: hidden;
+}
+
+#findglasses_game .background {
+  display: flex;
+  position: absolute;
+  background-image: url("image/findglasses/background_new.png");
+  width: 60vw;
+  /*left: 5%;
+  bottom: 0%;*/
+  /*原圖*/
+  left: 5.5%;
+  bottom: -2.5%;
+
+  aspect-ratio: 5330/3344;
+  /* width: 100vw; */
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.header img {
+  position: absolute;
+  width: 52%;
+  left: 25%;
+  top: -2%;
+  display: block;
+}
+
+#title {
+  width: 100%;
+  left: 0%;
+}
+
+.progress {
+  position: absolute;
+  height: 7vw;
+  width: 9vw;
+  bottom: 53%;
+  right: -2%;
+}
+
+#bar_position {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  display: none;
+}
+
+/* --------------  0%  -------------- */
+#bar_0 {
+  position: absolute;
+  width: 47%;
+  left: 25%;
+  top: 8%;
+}
+
+#icon_non_1 {
+  position: absolute;
+  width: 100%;
+  left: 10%;
+  top: 123%;
+}
+
+#icon_non_2 {
+  position: absolute;
+  width: 100%;
+  left: 10%;
+  top: -19%;
+}
+
+/* --------------  50%  -------------- */
+
+#bar_50 {
+  position: absolute;
+  width: 47%;
+  left: 23%;
+  top: 16%;
+
+  display: none;
+}
+
+#icon_50 {
+  position: absolute;
+  width: 100%;
+  left: 10%;
+  top: 121%;
+
+  display: none;
+}
+
+/* --------------  100%  -------------- */
+#icon_100 {
+  position: absolute;
+  width: 100%;
+  left: 7%;
+  top: -22%;
+
+  display: none;
+}
+
+#bar_100 {
+  position: absolute;
+  width: 47%;
+  left: 22.5%;
+  top: 13%;
+
+  display: none;
+}
+
+/*---------------     物件     ---------------*/
+
+/*物件區域、大小*/
+.towel,
+.detergent,
+.mirror,
+.boss,
+.boss_glasses {
+  position: absolute;
+  height: 35vw;
+  width: 70vw;
+  top: 20%;
+}
+
+.glasses,
+.chair {
+  position: absolute;
+  height: 50%;
+  width: 60vw;
+  bottom: 0%;
+}
+
+.glasses img {
+  position: absolute;
+  width: 11.5%;
+  pointer-events: auto;
+  background: transparent;
+  z-index: 1;
+}
+
+.towel img,
+.detergent img {
+  position: absolute;
+  width: 11.5%;
+  pointer-events: auto;
+  background: transparent;
+  z-index: 2;
+}
+
+.chair img {
+  position: absolute;
+  width: 16.5%;
+  pointer-events: auto;
+  background: transparent;
+}
+
+/*物件座標*/
+#detergent_ori {
+  left: 50%;
+  top: 51%;
+}
+
+#detergent_glow {
+  left: 50%;
+  top: 51%;
+}
+
+#towel_ori {
+  left: 20%;
+  top: 62%;
+}
+
+#towel_glow {
+  left: 20%;
+  top: 62%;
+}
+
+#glasses_1 {
+  left: 30.5%;
+  top: 36.5%;
+}
+
+#glasses_2 {
+  left: 34.5%;
+  top: 23.6%;
+}
+
+#glasses_3 {
+  left: 43%;
+  top: 27%;
+}
+
+#chair_ori {
+  left: 33%;
+  top: 42%;
+}
+
+#chair_glow {
+  left: 35%;
+  top: 44%;
+}
+
+.boss_glasses img {
+  position: absolute;
+  width: 7.5%;
+  pointer-events: auto;
+  background: transparent;
+  left: 67.2%;
+  top: 14.8%;
+}
+
+/*ori：未發光*/
+#towel_ori,
+#boss_glasses_ori,
+.chair img {
+  z-index: 2;
+}
+
+#clock_ori {
+  position: absolute;
+  width: 7.5%;
+  pointer-events: auto;
+  background: transparent;
+  z-index: 1;
+
+  left: 69.7%;
+  top: 25%;
+}
+
+/*glow：發光*/
+#clock_glow {
+  position: absolute;
+  width: 11.5%;
+  pointer-events: auto;
+  background: transparent;
+  z-index: 2;
+
+  left: 67.4%;
+  top: 19.5%;
+}
+
+#detergent_glow,
+#towel_glow,
+#clock_glow,
+#boss_glasses_glow,
+#chair_glow {
+  opacity: 0;
+  z-index: 2;
+}
+
+/*可拖動*/
+
+#glasses_1,
+#glasses_2,
+#glasses_3 {
+  opacity: 0;
+  z-index: 1;
+}
+
+/*不可拖動*/
+
+/*hover*/
+#clock_glow:hover,
+#glasses_1:hover,
+#glasses_2:hover,
+#glasses_3:hover,
+#detergent_glow:hover,
+#towel_glow:hover,
+#boss_glasses_glow:hover,
+#chair_glow:hover {
+  opacity: 1;
+}
+
+#detergent_ori:hover,
+#towel_ori:hover,
+#clock_ori:hover,
+#boss_glasses:hover,
+#chair_ori:hover {
+  opacity: 0;
+}
+
+/*    鏡子    */
+#mirror_sprayed {
+  position: absolute;
+  width: 11%;
+  pointer-events: auto;
+  background: transparent;
+  left: 52.2%;
+  top: 6%;
+
+  z-index: 4;
+}
+
+#mirror_pass {
+  position: absolute;
+  width: 14.5%;
+  pointer-events: auto;
+  background: transparent;
+  left: 52.2%;
+  top: 0%;
+
+  z-index: 1;
+  display: none;
+}
+
+
+#stain {
+  position: absolute;
+  width: 14.5%;
+  pointer-events: auto;
+  background: transparent;
+  left: 50.5%;
+  top: 7%;
+  z-index: 5;
+}
+
+/*    眼鏡行老闆    */
+.boss img {
+  position: absolute;
+  pointer-events: auto;
+  background: transparent;
+  z-index: 1;
+}
+
+#boss_ori {
+  left: 65%;
+  top: 14%;
+  width: 14%;
+  display: none;
+}
+
+#boss_without_g {
+  left: 59.15%;
+  top: 14.2%;
+  width: 21%;
+}
+
+#boss_pass {
+  left: 64.5%;
+  top: 16%;
+  width: 21%;
+
+  display: none;
+}
+
+/*    標題功能鍵    */
+.function img {
+  position: absolute;
+  pointer-events: auto;
+  background: transparent;
+  z-index: 2;
+
+  width: 10%;
+  top: 5%;
+}
+
+#home {
+  left: 15%;
+}
+
+#pause {
+  left: 76%;
+}
+
+
+/*    通關畫面    */
+.pass {
+  width: 70vw;
+  aspect-ratio: 5330/3344;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: none;
+}
+
+.overlay::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 3%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*原本background是102*/
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+
+.overlay {
+  position: relative;
+}
+
+#pass_menu {
+  position: absolute;
+  width: 65%;
+  z-index: 5;
+
+  left: 49%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  pointer-events: auto;
+  background: transparent;
+}
+
+.menu_bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  width: 25vw;
+  aspect-ratio: 5330/3344;
+  left: 40%;
+  top: 73%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 6;
+}
+
+#home_menu,
+#replay_menu,
+#next_menu {
+  position: absolute;
+  width: 60%;
+  pointer-events: auto;
+  background: transparent;
+}
+
+#home_menu {
+  top: 4%;
+}

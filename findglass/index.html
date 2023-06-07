@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>eyedventure</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser-arcade-physics.min.js"></script>
+</head>
+
+<body>
+  <div id="introduction">
+    <img class="intro" src="./image/introduction.png" width="98%">
+    <img class="start" src="./image/start.png" width="25%" onclick="begin()">
+  </div>
+  <div id="findglasses_game">
+    <div class="background"></div>
+    <div class="header">
+      <img id="title" src="image/findglasses/title.png">
+    </div>
+
+    <div class="progress">
+      <img id="bar_position" src="image/progress/Progress_bar.png">
+      <img id="bar_0" src="image/progress/Progress_bar_0.png">
+      <img id="bar_50" src="image/progress/Progress_bar_50.png">
+      <img id="bar_100" src="image/progress/Progress_bar_100.png">
+      <img id="icon_non_1" src="image/progress/Progress_icon_0.png">
+      <img id="icon_non_2" src="image/progress/Progress_icon_0.png">
+      <img id="icon_50" src="image/progress/Progress_icon_1.png">
+      <img id="icon_100" src="image/progress/Progress_icon_2.png">
+    </div>
+
+    <div class="glasses">
+      <img id="glasses_1" src="image/object/glasses_glow_1.png">
+      <img id="glasses_2" src="image/object/glasses_glow_2.png">
+      <img id="glasses_3" src="image/object/glasses_glow_3.png">
+    </div>
+
+    <div class="mirror">
+      <img id="mirror_pass" src="image/object/mirror_pass.png">
+      <img id="mirror_sprayed" src="image/object/mirror_sprayed.png">
+      <img id="stain" src="image/object/stain.png">
+    </div>
+
+    <!-- 以下為可拖動的物品 -->
+    <div class="clock">
+      <img id="clock_ori" src="image/object/clock_ori.png">
+      <img id="clock_glow" src="image/object/clock_glow.png">
+    </div>
+
+    <div class="detergent">
+      <img id="detergent_ori" src="image/object/detergent.png">
+      <img id="detergent_glow" src="image/object/detergent_glow.png" draggable='false'>
+    </div>
+
+    <div class="towel">
+      <img id="towel_ori" src="image/object/towel.png">
+      <img id="towel_glow" src="image/object/towel_glow.png" draggable='false'>
+    </div>
+
+    <div class="boss_glasses">
+      <img id="boss_glasses_ori" src="image/object/boss_glasses.png">
+      <img id="boss_glasses_glow" src="image/object/boss_glasses_glow.png" draggable='false'>
+    </div>
+
+    <div class="chair">
+      <img id="chair_ori" src="image/object/chair_ori.png">
+      <img id="chair_glow" src="image/object/chair_glow.png" draggable='false'>
+    </div>
+    <!-- 以上為可拖動的物品 -->
+
+    <div class="boss">
+      <img id="boss_ori" src="image/object/boss.png"> <!-- 隱藏 -->
+      <img id="boss_without_g" src="image/object/boss_without_g.png">
+      <img id="boss_pass" src="image/object/boss_pass.png">
+    </div>
+
+    <!-- 標題欄的功能鍵 -->
+    <div class="function">
+      <a href="https://merry.ee.ncku.edu.tw/~minyu/uidd/game_interface.html"><img id="home"
+          src="image/function/game_home.png"></a>
+      <a href="#"><img id="pause" src="image/function/game_pause.png"></a>
+    </div>
+
+
+  </div>
+
+  <!-- 通關 -->
+  <div class="pass">
+    <div class="overlay"></div>
+    <img id="pass_menu" src="image/function/pass.png">
+
+    <div class="menu_bar">
+      <a href="https://merry.ee.ncku.edu.tw/~minyu/uidd/game_interface.html"><img id="home_menu"
+          src="image/function/home.png"></a>
+      <a href="https://findglass.s3839083.repl.co/"><img id="replay_menu" src="image/function/replay.png"></a>
+      <a href="#"><img id="next_menu" src="image/function/next.png"></a>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
